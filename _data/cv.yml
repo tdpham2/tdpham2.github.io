@@ -2,7 +2,7 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Thang D. Pham
     - name: Date of Birth
       value: 14th March 1879
     - name: Languages
@@ -11,9 +11,9 @@
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Ph.D. Candidate
+      institution: Northwestern University
+      year: Expected June, 2024
       description:
         - Description 1.
         - Description 2.
@@ -71,14 +71,27 @@
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2023
       items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
+        - Terminal Year Fellowship. Northwestern University.
+    - year: 2021
       items: 
-        - Max Planck Medal
-
+        - Predictive Science and Engineering Design Fellowship. Northwestern University.
+    - year: 2019
+      items:
+        - Data Science Fellowship. Northwestern University.
+    - year: 2018
+      item:
+        - Best Computation and Theory Presentation in Gulf Coast Undergraduate Research Symposium. Rice University.
+    - year: 2018
+      item:
+        - Undergraduate Research Fellow. Worcester Polytechnic Institute.
+    - year: 2017
+      item:
+        - Certificate for Outstanding Undergraduate Research Presentation. Northeastern University.
+    - year: 2015
+      item:
+        - Presidential Scholarship. Worcester Polytechnic Institute.
 - title: Academic Interests
   type: nested_list
   contents:
