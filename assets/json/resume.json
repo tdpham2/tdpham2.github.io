@@ -35,8 +35,16 @@
     },
     {"name": "Northwestern University",
      "position": "Teaching assistant",
+     "startDate": "09-2019",
+     "endDate": "06-2024",
      "courses":"Thermodynamics, Statitstical mechanics, Molecular Modelling, Kinetics and Reaction Design"
-    }	    
+    },
+    {
+     "name": "Los Alamos National Laboratory",
+     "position": "Summer intern",
+     "startDate": "06-2019",
+     "endDate": "08-2019"
+    }    
   ],
   "volunteer": [],
   "education": [
@@ -55,8 +63,8 @@
      "institution":"Worcester Polytechnic Institute (WPI)",
      "area": "Chemical Engineering",
      "studyType": "Bachelor of Science",
-     "startDate": "September 2015",
-     "endDate": "May 2019",
+     "startDate": "09-2015",
+     "endDate": "05-2019",
      "score": "3.96"
    }     
   ],
@@ -82,7 +90,7 @@
   "skills": [],
   "languages": [
     {
-      "language": "German",
+      "language": "Vietnamese",
       "fluency": "Native speaker"
     },
     {
