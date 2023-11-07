@@ -4,7 +4,7 @@
     "label": "Ph.D. Candidate",
     "image": "",
     "email": "thangpham2024 at u.northwestern.edu",
-    "phone": "(912) 123-4567",
+    "phone": "",
     "url": "https://tdpham2.github.io/",
     "summary": "Molecular modelling, optimization and machine learning.",
     "location": {
@@ -27,8 +27,8 @@
       "name": "Northwestern University",
       "position": "Ph.D Candidate",
       "url": "",
-      "startDate": "September 2019",
-      "endDate": "June 2024",
+      "startDate": "09-2019",
+      "endDate": "06-2024",
       "summary": "Classical simulation (Monte Carlo, Molecular Dynamics), Density functional theory (DFT) calculation, Optimization (Genetic algorithms, Bayesian optimization), Machine Learning (Random forest, Graph neural networks",
       "highlights": [
       ]
@@ -45,8 +45,8 @@
       "url": "",
       "area": "Chemical and Biological Engineering",
       "studyType": "PhD",
-      "startDate": "September 2019",
-      "endDate": "June 2024",
+      "startDate": "09-2019",
+      "endDate": "06-2024",
       "score": "3.90",
       "courses": [
       ]
@@ -56,15 +56,25 @@
      "area": "Chemical Engineering",
      "studyType": "Bachelor of Science",
      "startDate": "September 2015",
-     "endDate": "May 2019"
+     "endDate": "May 2019",
+     "score": "3.96"
    }     
   ],
   "awards": [
     {
       "title": "Terminal Year Fellowship",
-      "date": "2023-09-01",
-      "awarder": "Northwestern University",
-      "summary": "Award for outstanding Ph.D. resaerch"
+      "date": "09-2023",
+      "awarder": "Northwestern University"
+    },
+    {
+      "title": "Predictive science and engineering design fellowship",
+      "date": "10-2021",
+      "awarder": "Northwestern University"
+    },
+    {
+      "title": "Data science fellowship",
+      "date": "09-2019",
+      "awarder": "Northwestern University"      
     }
   ],
   "certificates": [],
