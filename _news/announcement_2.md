@@ -1,10 +1,9 @@
 ---
 layout: post
-title: A long announcement with details
-date: 2015-11-07 16:11:00-0400
+title: I presented my poster titled "Implementation of Genetic Algorithms in Metal-Organic Frameworks (MOFs) for CO2 Capture" at AIChE 2023 in Orlando, FL.
+date: 2024-11-06 16:11:00-0400
 inline: false
 related_posts: false
 ---
 
-Announcements and news can be much longer than just quick inline posts. In fact, they can have all the features available for the standard blog posts. See below.
-
+I presented my poster titled "Implementation of Genetic Algorithms in Metal-Organic Frameworks (MOFs) for CO2 Capture" at AIChE 2023 in Orlando, FL.

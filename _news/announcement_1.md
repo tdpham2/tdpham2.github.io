@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I was awared the Northwestern Terminal Year Fellowship.
+I was awarded the Northwestern Terminal Year Fellowship.
