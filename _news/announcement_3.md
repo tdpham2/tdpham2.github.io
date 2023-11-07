@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I presented my talk titled "Investigation of Room Temperature Hydrogen Storage in Anionic Metal-Organic Frameworks (MOFs) with Extra-framework Cations"
+I presented my talk titled "Investigation of Room Temperature Hydrogen Storage in Anionic Metal-Organic Frameworks (MOFs) with Extra-framework Cations" in AIChE 2023 conference in Orlando, FL. 
