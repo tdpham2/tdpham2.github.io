@@ -6,7 +6,7 @@
     "email": "thangpham2024 at u.northwestern.edu",
     "phone": "(912) 123-4567",
     "url": "https://tdpham2.github.io/",
-    "summary": "Ph.D. Cand",
+    "summary": "Ph.D. Candidate at Northwestern Unversity. Research focuses on molecular modelling, optimization and machine learning.",
     "location": {
       "address": "2137 Tech Drive",
       "postalCode": "IL 60208",
@@ -17,45 +17,43 @@
     "profiles": [
       {
         "network": "Twitter",
-        "username": "AlbertEinstein",
-        "url": "https://twitter.com/AlbertEinstein"
+        "username": "Thang Pham",
+        "url": "https://twitter.com/Thang_DPham"
       }
     ]
   },
   "work": [
     {
-      "name": "Institute for Advanced Study, Princeton University",
-      "position": "Professor of Theoretical Physics",
-      "url": "https://example.com",
-      "startDate": "1933-01-01",
-      "endDate": "1955-01-01",
-      "summary": "Teaching at Palmer Physical Laboratory (now 302 Frist Campus Center). While not a professor at Princeton, I associated with the physics professors and continued to give lectures on campus.",
+      "name": "Northwestern University",
+      "position": "Ph.D Candidate",
+      "url": "",
+      "startDate": "2019-09-01",
+      "endDate": "2024-05-31",
+      "summary": "",
       "highlights": [
-        "Relativity"
       ]
     }
   ],
   "volunteer": [],
   "education": [
     {
-      "institution": "University of Zurich, Zurich, Switzerland",
-      "url": "https://www.uzh.ch/",
-      "area": "Software Development",
+      "institution": "Northwestern University",
+      "url": "",
+      "area": "Molecular Modelling, Optimization and Machine Learning",
       "studyType": "PhD",
-      "startDate": "1905-01-01",
-      "endDate": "1905-01-01",
+      "startDate": "2019-09-01",
+      "endDate": "2024-05-31",
       "score": "",
       "courses": [
-        "Theory of Relativity"
       ]
     }
   ],
   "awards": [
     {
-      "title": "Nobel Prize in Physics",
-      "date": "1921-11-01",
-      "awarder": "Royal Swedish Academy of Sciences",
-      "summary": "The Nobel Prizes are five separate prizes that, according to Alfred Nobel's will of 1895, are awarded to 'those who, during the preceding year, have conferred the greatest benefit to humankind.'"
+      "title": "Terminal Year Fellowship",
+      "date": "2023-09-01",
+      "awarder": "Northwestern University",
+      "summary": "Award for outstanding Ph.D. resaerch"
     }
   ],
   "certificates": [],
