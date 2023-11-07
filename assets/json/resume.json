@@ -6,7 +6,7 @@
     "email": "thangpham2024 at u.northwestern.edu",
     "phone": "(912) 123-4567",
     "url": "https://tdpham2.github.io/",
-    "summary": "Ph.D. Candidate at Northwestern Unversity. Research focuses on molecular modelling, optimization and machine learning.",
+    "summary": "Molecular modelling, optimization and machine learning.",
     "location": {
       "address": "2137 Tech Drive",
       "postalCode": "IL 60208",
@@ -27,26 +27,37 @@
       "name": "Northwestern University",
       "position": "Ph.D Candidate",
       "url": "",
-      "startDate": "2019-09-01",
-      "endDate": "2024-05-31",
-      "summary": "",
+      "startDate": "September 2019",
+      "endDate": "June 2024",
+      "summary": "Classical simulation (Monte Carlo, Molecular Dynamics), Density functional theory (DFT) calculation, Optimization (Genetic algorithms, Bayesian optimization), Machine Learning (Random forest, Graph neural networks",
       "highlights": [
       ]
-    }
+    },
+    {"name": "Northwestern University",
+     "position": "Teaching assistant",
+     "courses":"Thermodynamics, Statitstical mechanics, Molecular Modelling, Kinetics and Reaction Design"
+    }	    
   ],
   "volunteer": [],
   "education": [
     {
       "institution": "Northwestern University",
       "url": "",
-      "area": "Molecular Modelling, Optimization and Machine Learning",
+      "area": "Chemical and Biological Engineering",
       "studyType": "PhD",
-      "startDate": "2019-09-01",
-      "endDate": "2024-05-31",
-      "score": "",
+      "startDate": "September 2019",
+      "endDate": "June 2024",
+      "score": "3.90",
       "courses": [
       ]
-    }
+    },
+    {
+     "institution":"Worcester Polytechnic Institute (WPI)",
+     "area": "Chemical Engineering",
+     "studyType": "Bachelor of Science",
+     "startDate": "September 2015",
+     "endDate": "May 2019"
+   }     
   ],
   "awards": [
     {
