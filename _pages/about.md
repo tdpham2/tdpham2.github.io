@@ -16,7 +16,7 @@ profile:
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+social: false  # includes social icons at the bottom of the page
 ---
 Greetings! I am Thang Pham, a Ph.D. candidate in the Snurr group in the Department of Chemical and Biological Engineering at Northwestern University. My research has been focused on material discovery, with interfaces between molecular simulations, optimization techniques, and machine learning. My expertise is at the intersection of theoretical research and its real-world applications, as I adeptly bridge the gap between these two domains.
 
