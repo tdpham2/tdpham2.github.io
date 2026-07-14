@@ -1,12 +1,7 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - tdpham2
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - argonne-lcf/ChemGraph
+  - snurr-group/pacmof2
+  - globus-labs/mof-generation-at-scale
