@@ -395,16 +395,18 @@ medium_zoom:
 # Get external JSON data
 # -----------------------------------------------------------------------------
 
-jekyll_get_json:
-  - data: resume
-    json: assets/json/resume.json # it can also be an url
-jsonresume:
-  - basics
-  - work
-  - education
-  - publications
-  - projects
-  - volunteer
+# The CV page renders from _data/cv.yml. The JSON-resume source below is
+# disabled so it does not override _data/cv.yml (see _layouts/cv.html).
+# jekyll_get_json:
+#   - data: resume
+#     json: assets/json/resume.json # it can also be an url
+# jsonresume:
+#   - basics
+#   - work
+#   - education
+#   - publications
+#   - projects
+#   - volunteer
   - awards
   - certificates
   - skills
