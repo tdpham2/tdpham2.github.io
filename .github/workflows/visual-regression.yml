@@ -1,0 +1,60 @@
+name: Site browser checks
+
+on:
+  pull_request:
+    branches: [main, master]
+    paths:
+      - "_config.yml"
+      - "_data/**"
+      - "_bibliography/**"
+      - "_pages/**"
+      - "_posts/**"
+      - "_projects/**"
+      - "assets/**"
+      - "test/visual/**"
+      - ".github/workflows/visual-regression.yml"
+      - "package.json"
+      - "package-lock.json"
+      - "Gemfile"
+      - "Gemfile.lock"
+
+jobs:
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout candidate
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - name: Install JS dependencies
+        run: npm ci
+
+      - name: Install build and browser prerequisites
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+          pip3 install --upgrade nbconvert
+          npx playwright install --with-deps chromium webkit
+
+      - name: Run desktop and mobile browser smoke tests
+        run: npm run test:visual -- --reporter=line
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report
+          if-no-files-found: ignore

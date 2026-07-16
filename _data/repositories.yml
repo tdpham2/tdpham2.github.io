@@ -2,6 +2,18 @@ github_users:
   - tdpham2
 
 github_repos:
-  - argonne-lcf/ChemGraph
-  - snurr-group/pacmof2
-  - globus-labs/mof-generation-at-scale
+  - name: ChemGraph
+    owner: argonne-lcf
+    url: https://github.com/argonne-lcf/ChemGraph
+    description: Agentic framework for computational chemistry and materials science workflows.
+    language: Python
+  - name: pacmof2
+    owner: snurr-group
+    url: https://github.com/snurr-group/pacmof2
+    description: Machine-learning models and tools for assigning partial atomic charges in metal-organic frameworks.
+    language: Python
+  - name: mof-generation-at-scale
+    owner: globus-labs
+    url: https://github.com/globus-labs/mof-generation-at-scale
+    description: Create new metal-organic frameworks by combining generative AI and simulation on HPC.
+    language: Python

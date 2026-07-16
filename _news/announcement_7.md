@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Our paper **"ChemGraph as an agentic framework for computational chemistry workflows"** was published in *Communications Chemistry*.
+Our paper **"ChemGraph as an agentic framework for computational chemistry workflows"** was published in _Communications Chemistry_.

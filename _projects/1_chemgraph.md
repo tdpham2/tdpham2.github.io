@@ -23,4 +23,4 @@ single-agent GPT-4o baseline across a suite of computational-chemistry benchmark
 - **Role:** Lead developer.
 - **Stack:** Python, LangChain/LangGraph, MLIPs (MACE), ASE, HPC (ALCF Aurora/Polaris).
 - **Code:** [github.com/argonne-lcf/ChemGraph](https://github.com/argonne-lcf/ChemGraph)
-- **Paper:** *ChemGraph as an agentic framework for computational chemistry workflows*, Communications Chemistry (2026).
+- **Paper:** _ChemGraph as an agentic framework for computational chemistry workflows_, Communications Chemistry (2026).

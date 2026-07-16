@@ -7,38 +7,25 @@ nav: true
 nav_order: 4
 ---
 
-## GitHub users
+I contribute scientific software for agentic workflows, molecular simulation, and materials discovery. See my complete activity on [GitHub](https://github.com/tdpham2).
 
-{% if site.data.repositories.github_users %}
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% for user in site.data.repositories.github_users %}
-    {% include repository/repo_user.html username=user %}
-  {% endfor %}
-</div>
+## Selected repositories
 
----
-
-{% if site.repo_trophies.enabled %}
-{% for user in site.data.repositories.github_users %}
-  {% if site.data.repositories.github_users.size > 1 %}
-  <h4>{{ user }}</h4>
-  {% endif %}
-  <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  {% include repository/repo_trophies.html username=user %}
-  </div>
-
-  ---
-
-{% endfor %}
-{% endif %}
-{% endif %}
-
-## GitHub Repositories
-
-{% if site.data.repositories.github_repos %}
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+<div class="row row-cols-1 row-cols-md-2 g-4">
   {% for repo in site.data.repositories.github_repos %}
-    {% include repository/repo.html repository=repo %}
+    <div class="col mb-4">
+      <article class="card h-100">
+        <div class="card-body d-flex flex-column">
+          <h3 class="card-title h5">
+            <a href="{{ repo.url }}" rel="external nofollow noopener" target="_blank">{{ repo.owner }}/{{ repo.name }}</a>
+          </h3>
+          <p class="card-text flex-grow-1">{{ repo.description }}</p>
+          <p class="card-text text-muted small mb-0">
+            <i class="fa-solid fa-code" aria-hidden="true"></i>
+            {{ repo.language }}
+          </p>
+        </div>
+      </article>
+    </div>
   {% endfor %}
 </div>
-{% endif %}

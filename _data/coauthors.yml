@@ -1,15 +1,15 @@
-"Snurr":
+snurr:
   - firstname: ["Randall", "Randall Q.", "R. Q."]
     url: https://www.snurrgroup.northwestern.edu/
 
-"Keçeli":
+keceli:
   - firstname: ["Murat", "M."]
     url: https://www.anl.gov/profile/murat-keceli
 
-"Farha":
+farha:
   - firstname: ["Omar", "Omar K.", "O. K."]
     url: https://farha.northwestern.edu/
 
-"Deskins":
+deskins:
   - firstname: ["N. Aaron", "Aaron", "N. A."]
     url: https://www.wpi.edu/people/faculty/nadeskins

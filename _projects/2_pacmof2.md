@@ -18,4 +18,4 @@ previous charge-assignment methods handled poorly.
 
 - **Stack:** Python, scikit-learn / PyTorch, RASPA, DFT reference data.
 - **Code:** [github.com/snurr-group/pacmof2](https://github.com/snurr-group/pacmof2)
-- **Paper:** *Predicting Partial Atomic Charges in Metal–Organic Frameworks: An Extension to Ionic MOFs*, J. Phys. Chem. C (2024).
+- **Paper:** _Predicting Partial Atomic Charges in Metal–Organic Frameworks: An Extension to Ionic MOFs_, J. Phys. Chem. C (2024).

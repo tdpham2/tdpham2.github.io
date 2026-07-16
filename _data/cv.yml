@@ -1,111 +1,104 @@
-- title: General Information
-  type: map
-  contents:
-    - name: Full Name
-      value: Thang D. Pham
-    - name: Position
-      value: Postdoctoral Researcher, Argonne National Laboratory
-    - name: Email
-      value: tpham@anl.gov
-    - name: Languages
-      value: English, Vietnamese
+cv:
+  name: Thang D. Pham
+  label: Postdoctoral Researcher, Argonne National Laboratory
+  email: tpham@anl.gov
+  address:
+    city: Lemont
+    region: IL
+    postalCode: "60439"
+  summary: >
+    Postdoctoral researcher specializing in agentic AI systems for scientific discovery. Experienced in designing multi-agent workflows and scalable agentic pipelines on HPC systems, integrating AI with simulation, data, and scientific software to enable autonomous, large-scale discovery workflows.
 
-- title: Summary
-  type: list
-  contents:
-    - Postdoctoral researcher specializing in agentic AI systems for scientific discovery. Experience designing multi-agent workflows and scalable agentic pipelines on HPC systems, integrating AI with simulation, data, and scientific software to enable autonomous, large-scale discovery workflows.
+  sections:
+    Education:
+      - institution: Northwestern University
+        degree: Ph.D.
+        area: Chemical and Biological Engineering
+        start_date: "2019"
+        end_date: "2024"
+        location: Evanston, IL
+        highlights:
+          - Snurr group, Department of Chemical and Biological Engineering.
+          - AI-driven materials discovery combining molecular simulation, machine learning, and optimization.
+      - institution: Worcester Polytechnic Institute
+        degree: B.S.
+        area: Chemical Engineering
+        start_date: "2015"
+        end_date: "2019"
+        location: Worcester, MA
 
-- title: Education
-  type: time_table
-  contents:
-    - title: Ph.D. in Chemical and Biological Engineering
-      institution: Northwestern University, Evanston, IL
-      year: 2019 - 2024
-      description:
-        - Snurr group, Department of Chemical and Biological Engineering.
-        - AI-driven materials discovery combining molecular simulation, machine learning, and optimization.
-    - title: B.S. in Chemical Engineering
-      institution: Worcester Polytechnic Institute, Worcester, MA
-      year: 2015 - 2019
+    Experience:
+      - company: Argonne National Laboratory
+        position: Postdoctoral Researcher
+        start_date: "2024"
+        end_date: Present
+        location: Lemont, IL
+        highlights:
+          - Designed and deployed ChemGraph, a multi-agent AI system for planning, reasoning, and executing scientific workflows via natural language, enabling scalable execution across 512-Aurora-node workloads.
+          - Built agentic AI systems interfacing with simulation codes (DFT/MC/MLIP), databases (APIs, RAG), HPC schedulers (PBS), and workflow engines (Parsl, EnsembleLauncher).
+          - Developed an evaluation framework for agent performance in scientific applications, including early-stage assessment of tool-calling capabilities on the ALCF inference service.
+          - Collaborated with scientists to integrate domain-specific tools into agentic workflows, enabling automated spectroscopy (UV-vis, XANES, IR) and materials discovery pipelines.
+      - company: Northwestern University
+        position: Graduate Researcher
+        start_date: "2019"
+        end_date: "2024"
+        location: Evanston, IL
+        highlights:
+          - Developed AI-driven discovery systems combining simulation, machine learning, and optimization for autonomous materials design with experimental validation.
+          - Designed sequential decision-making frameworks, including Bayesian optimization and evolutionary algorithms, to optimize materials performance.
+          - Co-developed the CoRE MOF Database of more than 40,000 materials for data-driven workflows.
 
-- title: Experience
-  type: time_table
-  contents:
-    - title: Postdoctoral Researcher
-      institution: Argonne National Laboratory, Lemont, IL
-      year: Dec 2024 - Present
-      description:
-        - Designed and deployed ChemGraph, a multi-agent AI system for planning, reasoning, and executing scientific workflows via natural language, enabling scalable execution across 512-Aurora-node workloads.
-        - Built agentic AI systems interfacing with simulation codes (DFT/MC/MLIP), databases (APIs, RAG), HPC schedulers (PBS), and workflow engines (Parsl, EnsembleLauncher).
-        - Developed an evaluation framework for agent performance in scientific applications, including early-stage assessment of tool-calling capabilities on the ALCF inference service.
-        - Collaborated with scientists to integrate domain-specific tools into agentic workflows, enabling automated spectroscopy (UV-vis, XANES, IR) and materials discovery pipelines.
-    - title: Graduate Researcher
-      institution: Northwestern University, Evanston, IL
-      year: Sep 2019 - Sep 2024
-      description:
-        - Developed AI-driven discovery systems combining simulation, ML, and optimization for autonomous materials design with experimental validation.
-        - Designed sequential decision-making frameworks (Bayesian optimization, evolutionary algorithms) to optimize materials performance.
-        - Co-developed the CoRE MOF Database (40,000+ materials) for data-driven workflows.
+    Open Source Projects:
+      - name: ChemGraph
+        url: https://github.com/argonne-lcf/ChemGraph
+        summary: Agentic AI framework for computational chemistry workflows.
+      - name: PACMOF2
+        url: https://github.com/snurr-group/pacmof2
+        summary: Machine-learning models for predicting atomic charges in porous materials.
+      - name: MOFA
+        url: https://github.com/globus-labs/mof-generation-at-scale
+        summary: Generative metal-organic framework design and screening at leadership-class scale.
 
-- title: Open Source Projects
-  type: time_table
-  contents:
-    - title: <a href="https://github.com/argonne-lcf/ChemGraph">ChemGraph</a>
-      description:
-        - Agentic AI framework for computational chemistry workflows.
-    - title: <a href="https://github.com/snurr-group/pacmof2">PACMOF2</a>
-      description:
-        - Machine-learning models for predicting atomic charges in porous materials.
-    - title: <a href="https://github.com/globus-labs/mof-generation-at-scale">MOFA</a>
-      description:
-        - MOF generation at scale.
+    Honors and Awards:
+      - date: "2023"
+        title: Terminal Year Fellowship
+        awarder: Northwestern University
+      - date: "2021"
+        title: Predictive Science and Engineering Design Fellowship
+        awarder: Northwestern University
+      - date: "2019"
+        title: Data Science Fellowship
+        awarder: Northwestern University
+      - date: "2018"
+        title: Best Computation and Theory Presentation
+        awarder: Gulf Coast Undergraduate Research Symposium, Rice University
+      - date: "2018"
+        title: Undergraduate Research Fellow
+        awarder: Worcester Polytechnic Institute
+      - date: "2017"
+        title: Certificate for Outstanding Undergraduate Research Presentation
+        awarder: Northeastern University
+      - date: "2015"
+        title: Presidential Scholarship
+        awarder: Worcester Polytechnic Institute
 
-- title: Honors and Awards
-  type: time_table
-  contents:
-    - year: 2023
-      items:
-        - Terminal Year Fellowship. Northwestern University.
-    - year: 2021
-      items:
-        - Predictive Science and Engineering Design Fellowship. Northwestern University.
-    - year: 2019
-      items:
-        - Data Science Fellowship. Northwestern University.
-    - year: 2018
-      items:
-        - Best Computation and Theory Presentation, Gulf Coast Undergraduate Research Symposium. Rice University.
-        - Undergraduate Research Fellow. Worcester Polytechnic Institute.
-    - year: 2017
-      items:
-        - Certificate for Outstanding Undergraduate Research Presentation. Northeastern University.
-    - year: 2015
-      items:
-        - Presidential Scholarship. Worcester Polytechnic Institute.
+    Skills:
+      - name: Programming
+        keywords: [Python, Bash, C]
+      - name: Agentic Systems
+        keywords: [LangChain, LangGraph, smolagents]
+      - name: Machine Learning
+        keywords: [PyTorch, LLMs, vLLM, RAG, GraphRAG]
+      - name: HPC and Distributed Systems
+        keywords: [Slurm, PBS, Globus, Parsl, EnsembleLauncher, ALCF Aurora, ALCF Polaris, NERSC Perlmutter, TACC Stampede2]
+      - name: Simulation Packages
+        keywords: [VASP, CP2K, Gaussian, LAMMPS, RASPA, MACE, UMA]
 
-- title: Skills
-  type: nested_list
-  contents:
-    - title: Programming
-      items:
-        - Python, Bash, C
-    - title: Agentic Systems
-      items:
-        - LangChain, LangGraph, smolagents
-    - title: Machine Learning
-      items:
-        - PyTorch, LLMs, vLLM, RAG, GraphRAG
-    - title: HPC and Distributed Systems
-      items:
-        - Slurm, PBS, Globus, Parsl, EnsembleLauncher
-        - ALCF (Aurora, Polaris), NERSC (Perlmutter), TACC (Stampede2)
-    - title: Simulation Packages
-      items:
-        - DFT (VASP, CP2K, Gaussian)
-        - Molecular simulation (LAMMPS, RASPA)
-        - Machine-learning interatomic potentials (MACE, UMA)
+    Languages:
+      - language: English
+      - language: Vietnamese
 
-- title: Research Interests
-  type: list
-  contents:
-    - Agentic AI for scientific discovery; multi-agent orchestration on HPC; machine learning for materials; molecular simulation and optimization.
+    Interests:
+      - name: Research
+        keywords:
+          [Agentic AI for scientific discovery, multi-agent orchestration on HPC, machine learning for materials, molecular simulation, optimization]
