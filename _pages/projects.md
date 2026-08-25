@@ -10,6 +10,9 @@ horizontal: false
 ---
 
 <!-- pages/projects.md -->
+
+The projects below highlight selected open-source software and research efforts. For additional repositories and contributions, see [my GitHub profile](https://github.com/tdpham2).
+
 <div class="projects">
 {%- if site.enable_project_categories and page.display_categories %}
   <!-- Display categorized projects -->

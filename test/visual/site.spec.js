@@ -5,7 +5,6 @@ const routes = [
   "/al-folio/publications/",
   "/al-folio/talks/",
   "/al-folio/projects/",
-  "/al-folio/repositories/",
   "/al-folio/teaching/",
   "/al-folio/cv/",
   "/al-folio/blog/",
@@ -42,11 +41,18 @@ test("home page preserves the personal introduction", async ({ page }) => {
   await expect(page.getByText("agentic AI systems for scientific discovery").first()).toBeVisible();
 });
 
-test("CV renders migrated data and links the PDF", async ({ page }) => {
+test("CV links the full PDF without rendering structured data", async ({ page }) => {
   await page.goto("/al-folio/cv/", { waitUntil: "networkidle" });
-  await expect(page.getByText("Postdoctoral Researcher").first()).toBeVisible();
-  await expect(page.getByText("Argonne National Laboratory").first()).toBeVisible();
-  await expect(page.locator('a[href="/al-folio/assets/pdf/CV-ThangPham.pdf"]')).toBeVisible();
+  const pdfLink = page.getByRole("link", { name: "Open my full professional CV (PDF)" });
+  await expect(pdfLink).toHaveAttribute("href", "/al-folio/assets/pdf/Thang_Pham_CV.pdf");
+  await expect(pdfLink).toHaveAttribute("target", "_blank");
+  await expect(page.locator(".cv")).toHaveCount(0);
+});
+
+test("projects consolidate repository links", async ({ page }) => {
+  await page.goto("/al-folio/projects/", { waitUntil: "networkidle" });
+  await expect(page.locator('nav a[href="/al-folio/repositories/"]')).toHaveCount(0);
+  await expect(page.getByRole("link", { name: "my GitHub profile" })).toHaveAttribute("href", "https://github.com/tdpham2");
 });
 
 test("publication and talk bibliographies render personal entries", async ({ page }) => {
