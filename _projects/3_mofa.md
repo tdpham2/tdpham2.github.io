@@ -3,7 +3,7 @@ layout: page
 title: MOFA
 description: Generative MOF design and screening at leadership-class scale.
 img:
-importance: 3
+importance: 4
 category: work
 github: https://github.com/globus-labs/mof-generation-at-scale
 related_publications: pham2026multiagent
