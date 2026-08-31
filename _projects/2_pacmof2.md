@@ -3,7 +3,7 @@ layout: page
 title: PACMOF2
 description: Machine-learning models for predicting partial atomic charges in porous materials.
 img:
-importance: 2
+importance: 3
 category: work
 github: https://github.com/snurr-group/pacmof2
 related_publications: pham_predicting_2024

@@ -53,6 +53,11 @@ test("projects consolidate repository links", async ({ page }) => {
   await page.goto("/al-folio/projects/", { waitUntil: "networkidle" });
   await expect(page.locator('nav a[href="/al-folio/repositories/"]')).toHaveCount(0);
   await expect(page.getByRole("link", { name: "my GitHub profile" })).toHaveAttribute("href", "https://github.com/tdpham2");
+
+  const leaderboardUrl = "https://huggingface.co/spaces/Autonomous-Scientific-Agents/chemgraph-leaderboard";
+  const leaderboardCard = page.locator(`a[href="${leaderboardUrl}"]`, { hasText: "ChemGraph Leaderboard" });
+  await expect(leaderboardCard).toBeVisible();
+  await expect(page.locator('a[href="https://github.com/Autonomous-Scientific-Agents/chemgraph-leaderboard"]')).toBeVisible();
 });
 
 test("publication and talk bibliographies render personal entries", async ({ page }) => {
