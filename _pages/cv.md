@@ -14,14 +14,16 @@ description: My full professional curriculum vitae is available as a PDF.
 </p>
 
 <object
-  class="cv-pdf-viewer"
-  data="{{ cv_pdf_url }}"
-  type="application/pdf"
-  width="100%"
-  title="Thang Pham curriculum vitae PDF"
-  aria-label="Thang Pham curriculum vitae PDF"
-  style="height: 80vh; min-height: 600px"
+class="cv-pdf-viewer"
+data="{{ cv_pdf_url }}"
+type="application/pdf"
+width="100%"
+title="Thang Pham curriculum vitae PDF"
+aria-label="Thang Pham curriculum vitae PDF"
+style="height: 80vh; min-height: 600px"
+
 >
+
   <p>
     Your browser cannot display embedded PDFs.
     <a href="{{ cv_pdf_url }}" target="_blank" rel="noopener noreferrer">Open the CV PDF in a new tab</a>.
