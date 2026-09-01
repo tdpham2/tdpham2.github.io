@@ -119,6 +119,9 @@ test("publication and talk bibliographies render personal entries", async ({ pag
   await expect(page.locator('img[alt="mofga.png"]')).toBeVisible();
   await expect(page.locator('img[alt="coremof.jpg"]')).toBeVisible();
   await expect(page.locator('img[alt="pacmof2.png"]')).toBeVisible();
+  await expect(page.locator('img[alt="anionic_mof.png"]')).toBeVisible();
+  await expect(page.locator('img[alt="mof_screening_co2_capture.png"]')).toBeVisible();
+  await expect(page.locator('img[alt="photocarboxylation.png"]')).toBeVisible();
   expect(await page.locator("ol.bibliography > li").count()).toBe(18);
 
   await page.goto("/al-folio/talks/", { waitUntil: "networkidle" });
