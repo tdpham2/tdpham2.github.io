@@ -110,9 +110,19 @@ test("MOFA identifies contributor status without claiming a publication", async 
 test("publication and talk bibliographies render personal entries", async ({ page }) => {
   await page.goto("/al-folio/publications/", { waitUntil: "networkidle" });
   await expect(page.locator("#pham_chemgraph_2026")).toBeVisible();
+  await expect(page.locator("#roy2026knowledgeactionoutcomes2025")).toBeVisible();
+  await expect(page.locator("#grizzi2026chemgraphxanesagenticframeworkxanes")).toBeVisible();
+  await expect(page.locator("#tummalapalli2026overcomingorchestrationbottlenecksexascale")).toBeVisible();
   await expect(page.locator('img[alt="chemgraph_comm_chem.png"]')).toBeVisible();
   await expect(page.locator('img[alt="multi_agent_chemgraph.png"]')).toBeVisible();
-  expect(await page.locator("ol.bibliography > li").count()).toBe(15);
+  await expect(page.locator('img[alt="side-arm-sterics.png"]')).toBeVisible();
+  await expect(page.locator('img[alt="mofga.png"]')).toBeVisible();
+  await expect(page.locator('img[alt="coremof.jpg"]')).toBeVisible();
+  await expect(page.locator('img[alt="pacmof2.png"]')).toBeVisible();
+  await expect(page.locator('img[alt="anionic_mof.png"]')).toBeVisible();
+  await expect(page.locator('img[alt="mof_screening_co2_capture.png"]')).toBeVisible();
+  await expect(page.locator('img[alt="photocarboxylation.png"]')).toBeVisible();
+  expect(await page.locator("ol.bibliography > li").count()).toBe(18);
 
   await page.goto("/al-folio/talks/", { waitUntil: "networkidle" });
   await expect(page.locator("#pham2026isc")).toBeVisible();
