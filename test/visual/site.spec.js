@@ -110,6 +110,8 @@ test("MOFA identifies contributor status without claiming a publication", async 
 test("publication and talk bibliographies render personal entries", async ({ page }) => {
   await page.goto("/al-folio/publications/", { waitUntil: "networkidle" });
   await expect(page.locator("#pham_chemgraph_2026")).toBeVisible();
+  await expect(page.locator('img[alt="chemgraph_comm_chem.png"]')).toBeVisible();
+  await expect(page.locator('img[alt="multi_agent_chemgraph.png"]')).toBeVisible();
   expect(await page.locator("ol.bibliography > li").count()).toBe(15);
 
   await page.goto("/al-folio/talks/", { waitUntil: "networkidle" });
