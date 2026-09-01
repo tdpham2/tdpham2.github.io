@@ -69,6 +69,44 @@ test("projects consolidate repository links", async ({ page }) => {
   await expect(page.locator('a[href="https://github.com/Autonomous-Scientific-Agents/chemgraph-leaderboard"]')).toBeVisible();
 });
 
+const projectReferences = [
+  {
+    route: "/al-folio/projects/1_chemgraph/",
+    referenceIds: ["pham_chemgraph_2026", "pham2026multiagent"],
+  },
+  {
+    route: "/al-folio/projects/2_pacmof2/",
+    referenceIds: ["pham_predicting_2024"],
+  },
+  {
+    route: "/al-folio/projects/4_chemgraph_leaderboard/",
+    referenceIds: ["pham_chemgraph_2026"],
+  },
+  {
+    route: "/al-folio/projects/5_mofga/",
+    referenceIds: ["pham_implementation_2025"],
+  },
+];
+
+for (const { route, referenceIds } of projectReferences) {
+  test(`${route} renders its related publications`, async ({ page }) => {
+    await page.goto(route, { waitUntil: "networkidle" });
+    await expect(page.getByRole("heading", { name: "References" })).toBeVisible();
+    await expect(page.locator("ol.bibliography > li")).toHaveCount(referenceIds.length);
+
+    for (const referenceId of referenceIds) {
+      await expect(page.locator(`#${referenceId}`)).toBeVisible();
+    }
+  });
+}
+
+test("MOFA identifies contributor status without claiming a publication", async ({ page }) => {
+  await page.goto("/al-folio/projects/3_mofa/", { waitUntil: "networkidle" });
+  await expect(page.locator("li", { hasText: "Role:" })).toContainText("Contributor.");
+  await expect(page.getByRole("heading", { name: "References" })).toHaveCount(0);
+  await expect(page.locator("ol.bibliography")).toHaveCount(0);
+});
+
 test("publication and talk bibliographies render personal entries", async ({ page }) => {
   await page.goto("/al-folio/publications/", { waitUntil: "networkidle" });
   await expect(page.locator("#pham_chemgraph_2026")).toBeVisible();
