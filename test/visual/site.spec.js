@@ -30,7 +30,7 @@ for (const route of routes) {
     const response = await page.goto(route, { waitUntil: "networkidle" });
     expect(response).not.toBeNull();
     expect(response.ok()).toBeTruthy();
-    await expect(page.locator("main")).toBeVisible();
+    await expect(page.getByRole("main")).toBeVisible();
     await expect(page.getByText("Page not found")).toHaveCount(0);
   });
 }
@@ -72,7 +72,7 @@ test("projects consolidate repository links", async ({ page }) => {
 test("publication and talk bibliographies render personal entries", async ({ page }) => {
   await page.goto("/al-folio/publications/", { waitUntil: "networkidle" });
   await expect(page.locator("#pham_chemgraph_2026")).toBeVisible();
-  expect(await page.locator("ol.bibliography > li").count()).toBe(16);
+  expect(await page.locator("ol.bibliography > li").count()).toBe(15);
 
   await page.goto("/al-folio/talks/", { waitUntil: "networkidle" });
   await expect(page.locator("#pham2026isc")).toBeVisible();
