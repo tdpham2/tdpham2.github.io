@@ -41,11 +41,20 @@ test("home page preserves the personal introduction", async ({ page }) => {
   await expect(page.getByText("agentic AI systems for scientific discovery").first()).toBeVisible();
 });
 
-test("CV links the full PDF without rendering structured data", async ({ page }) => {
+test("CV embeds the full PDF without rendering structured data", async ({ page }) => {
   await page.goto("/al-folio/cv/", { waitUntil: "networkidle" });
-  const pdfLink = page.getByRole("link", { name: "Open my full professional CV (PDF)" });
-  await expect(pdfLink).toHaveAttribute("href", "/al-folio/assets/pdf/Thang_Pham_CV.pdf");
+  const pdfUrl = "/al-folio/assets/pdf/Thang_Pham_CV.pdf";
+  const pdfViewer = page.locator('object[type="application/pdf"]');
+  const pdfLink = page.getByRole("link", { name: "Open my full professional CV in a new tab (PDF)" });
+
+  await expect(pdfViewer).toBeVisible();
+  await expect(pdfViewer).toHaveAttribute("data", pdfUrl);
+  await expect(pdfViewer).toHaveAttribute("title", "Thang Pham curriculum vitae PDF");
+  await expect(pdfLink).toHaveAttribute("href", pdfUrl);
   await expect(pdfLink).toHaveAttribute("target", "_blank");
+
+  const pdfResponse = await page.request.get(pdfUrl);
+  expect(pdfResponse.ok()).toBeTruthy();
   await expect(page.locator(".cv")).toHaveCount(0);
 });
 
