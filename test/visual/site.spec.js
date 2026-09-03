@@ -38,7 +38,7 @@ for (const route of routes) {
 
 test("home page preserves the personal introduction", async ({ page }) => {
   await page.goto("/al-folio/", { waitUntil: "networkidle" });
-  await expect(page.getByText("Greetings! I am Thang Pham")).toBeVisible();
+  await expect(page.getByText("I am Thang Pham, a postdoctoral researcher at Argonne National Laboratory.", { exact: false })).toBeVisible();
   await expect(page.getByText("agentic AI systems for scientific discovery").first()).toBeVisible();
 });
 
