@@ -8,6 +8,7 @@ const routes = [
   "/al-folio/teaching/",
   "/al-folio/cv/",
   "/al-folio/blog/",
+  "/al-folio/privacy/",
 ];
 
 test.beforeEach(async ({ page }) => {
@@ -39,6 +40,26 @@ test("home page preserves the personal introduction", async ({ page }) => {
   await page.goto("/al-folio/", { waitUntil: "networkidle" });
   await expect(page.getByText("Greetings! I am Thang Pham")).toBeVisible();
   await expect(page.getByText("agentic AI systems for scientific discovery").first()).toBeVisible();
+});
+
+test("analytics is wired through consent and privacy controls", async ({ page }) => {
+  const googleTagRequests = [];
+  page.on("request", (request) => {
+    if (new URL(request.url()).hostname === "www.googletagmanager.com") {
+      googleTagRequests.push(request.url());
+    }
+  });
+
+  await page.goto("/al-folio/", { waitUntil: "networkidle" });
+
+  const googleTag = page.locator('script[src="https://www.googletagmanager.com/gtag/js?id=G-BGMTPP95EM"]');
+  await expect(googleTag).toHaveAttribute("type", "text/plain");
+  await expect(googleTag).toHaveAttribute("data-category", "analytics");
+  expect(googleTagRequests).toHaveLength(0);
+  await expect(page.getByRole("link", { name: "Privacy" })).toHaveAttribute("href", "https://tdpham2.github.io/privacy/");
+
+  await page.goto("/al-folio/privacy/", { waitUntil: "networkidle" });
+  await expect(page.getByRole("button", { name: "Manage cookie preferences" })).toHaveAttribute("onclick", /CookieConsent\.showPreferences\(\)/);
 });
 
 test("CV embeds the full PDF without rendering structured data", async ({ page }) => {

@@ -1451,7 +1451,7 @@ When cookie consent is enabled, these analytics providers are automatically bloc
 
 Each provider only collects data if:
 
-1. It's enabled in `_config.yml` (e.g., `enable_google_analytics: true`)
+1. Its ID is set under the `analytics` block in `_config.yml` (for example, `analytics.google: G-XXXXXXXXXX`)
 2. The user has granted consent to the "analytics" category in the consent dialog
 
 ### How it integrates with analytics
