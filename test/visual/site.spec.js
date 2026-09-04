@@ -56,10 +56,58 @@ test("analytics is wired through consent and privacy controls", async ({ page })
   await expect(googleTag).toHaveAttribute("type", "text/plain");
   await expect(googleTag).toHaveAttribute("data-category", "analytics");
   expect(googleTagRequests).toHaveLength(0);
+  const cookieThemeSyncUrl = "/al-folio/lib/assets/al_cookie/js/cookie-theme-sync.js";
+  await expect(page.locator(`script[src="${cookieThemeSyncUrl}"]`)).toHaveCount(1);
+  expect((await page.request.get(cookieThemeSyncUrl)).ok()).toBeTruthy();
   await expect(page.getByRole("link", { name: "Privacy" })).toHaveAttribute("href", "https://tdpham2.github.io/privacy/");
 
   await page.goto("/al-folio/privacy/", { waitUntil: "networkidle" });
   await expect(page.getByRole("button", { name: "Manage cookie preferences" })).toHaveAttribute("onclick", /CookieConsent\.showPreferences\(\)/);
+});
+
+test("analytics consent follows the accepted CookieConsent category", async ({ page }) => {
+  await page.addInitScript(() => {
+    window.CookieConsent = {
+      analyticsAccepted: false,
+      acceptedCategory(category) {
+        return category === "analytics" && this.analyticsAccepted;
+      },
+      run(config) {
+        window.cookieConsentTestConfig = config;
+      },
+    };
+  });
+  await page.route("**/vanilla-cookieconsent@*/dist/cookieconsent.umd.js", async (route) => {
+    await route.abort("blockedbyclient");
+  });
+
+  await page.goto("/al-folio/", { waitUntil: "networkidle" });
+  await expect.poll(() => page.evaluate(() => Boolean(window.cookieConsentTestConfig))).toBe(true);
+
+  const initialState = await page.evaluate(() => {
+    const consentCommands = window.dataLayer.map((entry) => Array.from(entry)).filter((entry) => entry[0] === "consent");
+    return consentCommands.at(-1);
+  });
+  expect(initialState[1]).toBe("default");
+  expect(initialState[2].analytics_storage).toBe("denied");
+
+  const grantedState = await page.evaluate(() => {
+    window.CookieConsent.analyticsAccepted = true;
+    window.cookieConsentTestConfig.onConsent({ cookie: { categories: ["necessary", "analytics"] } });
+    const consentCommands = window.dataLayer.map((entry) => Array.from(entry)).filter((entry) => entry[0] === "consent");
+    return consentCommands.at(-1);
+  });
+  expect(grantedState[1]).toBe("update");
+  expect(grantedState[2].analytics_storage).toBe("granted");
+
+  const deniedState = await page.evaluate(() => {
+    window.CookieConsent.analyticsAccepted = false;
+    window.cookieConsentTestConfig.onChange({ cookie: { categories: ["necessary"] }, changedCategories: ["analytics"] });
+    const consentCommands = window.dataLayer.map((entry) => Array.from(entry)).filter((entry) => entry[0] === "consent");
+    return consentCommands.at(-1);
+  });
+  expect(deniedState[1]).toBe("update");
+  expect(deniedState[2].analytics_storage).toBe("denied");
 });
 
 test("CV embeds the full PDF without rendering structured data", async ({ page }) => {
